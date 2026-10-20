@@ -7,99 +7,229 @@
 <meta name="description" content="A sample ConveneMD expert dossier — the format, verification, and rate transparency a firm receives within 24 hours of a case request. Candidates shown are fictional.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://convenemd.com/sample-dossier.html">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#17222b;--slate:#1d4e68;--paper:#fdfcf9;--line:#e3ded2;--mut:#5c6a72}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:"Libre Franklin",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-  .wrap{max-width:880px;margin:0 auto;padding:0 1.5rem}
-  header{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 0;border-bottom:1px solid var(--line)}
-  .brand{font-weight:700;font-size:1.25rem;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
-  header a.cta{color:var(--slate);font-weight:600;text-decoration:none;font-size:.95rem}
-  .badge{display:inline-block;margin:2.6rem 0 1rem;padding:.35rem .8rem;border:1px solid var(--slate);color:var(--slate);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-  h1{font-family:"Source Serif 4",serif;font-weight:600;font-size:clamp(2rem,4.6vw,3rem);line-height:1.15;letter-spacing:-.01em}
-  .lede{margin-top:1.1rem;font-size:1.12rem;color:#33424c;max-width:44rem}
-  .request{margin:2.2rem 0;padding:1.2rem 1.4rem;background:#f3efe4;border-left:3px solid var(--slate);font-size:.98rem}
-  .cand{margin:2.6rem 0;padding:2rem;border:1px solid var(--line);background:#fff}
-  .cand h2{font-family:"Source Serif 4",serif;font-size:1.55rem;font-weight:600}
-  .cand h2 em{font-size:.95rem;color:var(--mut);font-family:"Libre Franklin",sans-serif;font-style:normal;font-weight:500}
-  table{width:100%;border-collapse:collapse;margin-top:1.2rem;font-size:.96rem}
-  td{padding:.5rem .8rem .5rem 0;border-bottom:1px solid var(--line);vertical-align:top}
-  td.k{width:34%;font-weight:600;color:var(--slate);white-space:nowrap}
-  .note{margin-top:1.1rem;font-size:.96rem;color:#33424c}
-  h3.sec{font-family:"Source Serif 4",serif;font-size:1.7rem;font-weight:600;margin:3rem 0 1rem}
-  ol.how{margin-left:1.3rem;font-size:1rem;color:#33424c}
-  ol.how li{margin:.55rem 0}
-  .cta-band{margin:3.2rem 0 4rem;padding:2rem;background:var(--ink);color:#f4f1e8;text-align:center}
-  .cta-band p{font-family:"Source Serif 4",serif;font-size:1.3rem;margin-bottom:1.1rem}
-  .btn{display:inline-block;background:#fff;color:var(--ink);padding:.8rem 1.6rem;font-weight:600;text-decoration:none}
-  footer{border-top:1px solid var(--line);padding:1.6rem 0 2.4rem;color:var(--mut);font-size:.9rem}
+  :root{
+    --ink:#17222b; --mut:#5c6871; --faint:#8a95a0;
+    --paper:#ffffff; --wash:#f4f6f7; --deep:#10161c;
+    --line:#dde3e7; --line2:#c9d2d9;
+    --acc:#1d4e68; --acc-d:#163c51;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:'Libre Franklin',-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2{font-family:'Source Serif 4',Georgia,serif;font-weight:600;line-height:1.16;margin:0;letter-spacing:-.01em}
+  h3{font-family:'Libre Franklin',sans-serif;margin:0}
+  a{color:var(--acc)}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 2rem}
+  @media(max-width:640px){.wrap{padding:0 1.25rem}}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .25s ease}
+  header.scrolled{box-shadow:0 8px 28px rgba(23,34,43,.09)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{font-weight:800;font-size:1.32rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .brand span{color:inherit}
+  .navlinks{display:flex;gap:2.1rem;align-items:center}
+  .navlinks a{text-decoration:none;font-size:.93rem;font-weight:500;color:var(--ink)}
+  .navlinks a:hover{color:var(--acc)}
+  @media(max-width:820px){.navlinks a:not(.btn){display:none}}
+  .btn{display:inline-block;background:var(--acc);color:#fff !important;text-decoration:none;font-weight:600;font-size:.95rem;padding:.8rem 1.7rem;border-radius:4px;border:1px solid var(--acc);transition:.15s}
+  .btn:hover{background:var(--acc-d);border-color:var(--acc-d);transform:translateY(-1px)}
+  .btn:active{transform:translateY(0)}
+  .btn.plain{background:#fff;color:var(--ink) !important;border-color:var(--line2)}
+  .btn.plain:hover{border-color:var(--ink);background:#fff}
+  .btn.light{background:#fff;border-color:#fff;color:var(--deep) !important}
+  .btn.light:hover{background:#e8edf0}
+  .btn.ghostl{background:transparent;border-color:#46545f;color:#fff !important}
+  .btn.ghostl:hover{border-color:#fff}
+
+  .hero{padding:8.5rem 0 7.5rem;background:radial-gradient(62rem 30rem at 88% -12%,rgba(29,78,104,.08),rgba(29,78,104,0) 60%),linear-gradient(180deg,#ffffff 55%,#f7f9fa 100%)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:700;color:var(--acc);margin-bottom:1.6rem}
+  .hero h1{font-size:clamp(3rem,6.4vw,4.9rem);max-width:15em;letter-spacing:-.03em}
+  .hero p.sub{font-size:1.25rem;color:var(--mut);max-width:38em;margin:2rem 0 2.8rem;line-height:1.6}
+  .cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+  .facts{display:flex;gap:3rem;flex-wrap:wrap;margin-top:4.5rem;padding-top:2.2rem;border-top:1px solid var(--line)}
+  .fact b{display:block;font-family:'Source Serif 4',serif;font-size:1.65rem;font-weight:600;line-height:1.1}
+  .fact span{font-size:.88rem;color:var(--mut)}
+
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+  .strip .wrap{display:flex;gap:2.6rem;flex-wrap:wrap;padding:1.3rem 2rem;font-size:.92rem;color:var(--mut)}
+  .strip b{color:var(--ink);font-weight:600}
+
+  section{padding:7rem 0}
+  @media(max-width:640px){section{padding:4.5rem 0}}
+  .kicker{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--acc);margin-bottom:1rem}
+  h2{font-size:clamp(1.9rem,3.8vw,2.7rem);max-width:20em}
+  .lede{color:var(--mut);font-size:1.08rem;max-width:43em;margin-top:1.1rem}
+  .rows{margin-top:3.5rem;border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:64px 1fr 1.6fr;gap:1.8rem;padding:2.1rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+  @media(max-width:760px){.row{grid-template-columns:40px 1fr}.row p{grid-column:2}}
+  .row .n{font-family:'Source Serif 4',serif;font-size:1.25rem;color:var(--faint)}
+  .row h3{font-size:1.12rem;font-weight:700}
+  .row p{color:var(--mut);margin:0;font-size:1rem}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;margin-top:3.5rem}
+  @media(max-width:860px){.steps{grid-template-columns:1fr}}
+  .step .n{font-family:'Source Serif 4',serif;font-size:2rem;color:var(--acc);display:block;margin-bottom:.9rem}
+  .step h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .step p{color:var(--mut);margin:0}
+
+  table.cmp{width:100%;border-collapse:collapse;margin-top:3.5rem;font-size:.96rem}
+  table.cmp th,table.cmp td{padding:1.05rem 1.1rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  table.cmp thead th{font-weight:700;border-bottom:2px solid var(--ink);font-size:.98rem}
+  table.cmp td:first-child{font-weight:600;width:20%}
+  table.cmp td.us{font-weight:600;color:var(--acc-d)}
+  table.cmp tr:last-child td{border-bottom:none}
+  @media(max-width:760px){table.cmp{font-size:.86rem} table.cmp td:first-child{width:auto}}
+
+  .photo{margin-top:4rem}
+  .photo img{width:100%;height:420px;object-fit:cover;display:block;border-radius:4px}
+  @media(max-width:640px){.photo img{height:260px}}
+  .photo figcaption{font-size:.85rem;color:var(--faint);margin-top:.7rem}
+
+  .specs{columns:3;column-gap:3rem;margin-top:3rem}
+  @media(max-width:860px){.specs{columns:2}}
+  @media(max-width:520px){.specs{columns:1}}
+  .specs span{display:block;padding:.62rem 0;border-bottom:1px solid var(--line);font-size:1rem;break-inside:avoid}
+
+  .band{background:var(--wash);border-radius:6px;padding:4rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:start}
+  @media(max-width:860px){.band{grid-template-columns:1fr;padding:2.4rem 1.6rem}}
+  .band p{color:var(--mut)}
+  .band ul{margin:0;padding:0;list-style:none}
+  .band li{padding:.95rem 0;border-bottom:1px solid var(--line);font-size:1rem}
+  .band li:last-child{border-bottom:none}
+  .band li b{font-weight:700}
+
+  details{border-bottom:1px solid var(--line);padding:1.35rem 0}
+  details:first-of-type{border-top:1px solid var(--line)}
+  summary{font-weight:600;font-size:1.04rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:'Source Serif 4',serif;font-size:1.4rem;color:var(--acc);margin-left:1rem}
+  details[open ] summary::after{content:"–"}
+  details p{color:var(--mut);margin:.8rem 0 0;max-width:48em}
+
+  .final{background:var(--deep);color:#fff;padding:7.5rem 0;text-align:left}
+  .final h2{color:#fff;max-width:16em}
+  .final p{color:#a7b3bd;font-size:1.1rem;margin:1.2rem 0 2.4rem}
+
+  footer{padding:4rem 0 3rem;font-size:.9rem;color:var(--mut)}
+  footer .brand{color:var(--ink)}
+  footer a{color:var(--acc)}
+  .fineprint{color:var(--faint);font-size:.8rem;margin-top:1.6rem;max-width:62em;line-height:1.6}
+
+  .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.61,.36,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+  @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
+.brand .mark{vertical-align:-7px;margin-right:.5rem;border-radius:6px}
 </style>
+
+<style>
+  .narrow{max-width:920px}
+  .docpage{padding:4.5rem 0 5.5rem}
+  .samplebadge{display:inline-block;padding:.4rem .85rem;border:1px solid var(--acc);border-radius:4px;color:var(--acc);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.6rem}
+  .docpage h1{font-size:clamp(2.1rem,4.4vw,3.1rem);max-width:16em}
+  .docpage .lede{margin-top:1.2rem}
+  .reqbox{margin:2.6rem 0 0;background:var(--wash);border-left:3px solid var(--acc);border-radius:0 6px 6px 0;padding:1.3rem 1.5rem;font-size:.99rem}
+  .cand{margin-top:2.6rem;border:1px solid var(--line);border-radius:6px;padding:2.4rem}
+  @media(max-width:640px){.cand{padding:1.5rem 1.2rem}}
+  .cand h2{font-size:1.6rem}
+  .cand h2 .fic{font-family:'Libre Franklin',sans-serif;font-size:.9rem;font-weight:500;color:var(--faint);letter-spacing:.04em;text-transform:uppercase;margin-left:.4rem}
+  table.spec{width:100%;border-collapse:collapse;margin-top:1.4rem;font-size:.97rem}
+  table.spec td{padding:.62rem .9rem .62rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+  table.spec tr:last-child td{border-bottom:none}
+  table.spec td.k{width:30%;font-weight:600;color:var(--acc-d);white-space:nowrap}
+  @media(max-width:640px){table.spec td.k{white-space:normal;width:38%}}
+  .screener{margin-top:1.2rem;color:var(--mut);font-size:.98rem}
+  .screener b{color:var(--ink)}
+  .howlist{margin:2.2rem 0 0;padding:0;list-style:none;counter-reset:hw}
+  .howlist li{counter-increment:hw;display:grid;grid-template-columns:56px 1fr;gap:1.4rem;padding:1.5rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .howlist li:first-child{border-top:1px solid var(--line)}
+  .howlist .n{font-family:'Source Serif 4',serif;font-size:1.35rem;color:var(--acc)}
+  .howlist p{margin:.25rem 0 0;color:var(--mut)}
+  .howlist h3{font-size:1.05rem;font-weight:700}
+</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="brand" href="index.html">ConveneMD</a>
-    <a class="cta" href="request-expert.html">Request an Expert →</a>
-  </header>
-
-  <span class="badge">Sample — all candidates fictional</span>
-  <h1>What a ConveneMD dossier looks like.</h1>
-  <p class="lede">This is the document a firm receives within 24 hours of a case request: verified credentials, a completed conflicts check, full testimony history, and the expert's true rates. The physicians below are invented — the format, checks, and transparency are exactly real.</p>
-
-  <div class="request"><strong>Sample request:</strong> Plaintiff firm, Illinois. Reviewing physician for a 735 ILCS 5/2-622 report — total hip arthroplasty matter (alleged component malpositioning / failure to revise). Reviewer may continue as testifying expert.</div>
-
-  <section class="cand">
-    <h2>Candidate A — Daniel R. Kessler, MD <em>(fictional)</em></h2>
-    <table>
-      <tr><td class="k">Specialty</td><td>Orthopedic Surgery — adult reconstruction (hip &amp; knee arthroplasty)</td></tr>
-      <tr><td class="k">Board certification</td><td>ABOS, Orthopaedic Surgery; fellowship-trained, adult reconstruction</td></tr>
-      <tr><td class="k">Licensure</td><td>Illinois (active, no restrictions) — verified</td></tr>
-      <tr><td class="k">Active practice</td><td>Yes — ~450 primary hip/knee replacements per year, community hospital + ASC</td></tr>
-      <tr><td class="k">Experience</td><td>16 years post-fellowship</td></tr>
-      <tr><td class="k">Verification</td><td>License ✓ · Board cert ✓ · Active practice ✓ · Disciplinary history: none found</td></tr>
-      <tr><td class="k">Conflicts check</td><td>Cleared against the parties named in the request; no prior involvement with the treating facility</td></tr>
-      <tr><td class="k">Testimony history</td><td>9 matters: 5 plaintiff / 4 defense. Deposed 6×, trial 2×. Never excluded</td></tr>
-      <tr><td class="k">Rates</td><td>Review $650/hr · Deposition $950/hr · Trial $1,200/hr · Retainer $3,500</td></tr>
-      <tr><td class="k">Availability</td><td>Can begin review within 48 hours of engagement; ~6 hrs/week. Available for 2-622 review and testimony</td></tr>
-    </table>
-    <p class="note"><strong>Screener note:</strong> High-volume arthroplasty surgeon whose practice mirrors the treating physician's setting — the profile Illinois courts expect for a 2-622 reviewer in a hip case.</p>
-  </section>
-
-  <section class="cand">
-    <h2>Candidate B — Priya S. Raman, MD <em>(fictional)</em></h2>
-    <table>
-      <tr><td class="k">Specialty</td><td>Orthopedic Surgery — adult reconstruction; revision arthroplasty focus</td></tr>
-      <tr><td class="k">Board certification</td><td>ABOS, Orthopaedic Surgery; fellowship-trained, adult reconstruction</td></tr>
-      <tr><td class="k">Licensure</td><td>Illinois + Indiana (active, no restrictions) — verified</td></tr>
-      <tr><td class="k">Active practice</td><td>Yes — academic medical center; revision hip cases a substantial share of practice</td></tr>
-      <tr><td class="k">Experience</td><td>12 years post-fellowship; teaches arthroplasty fellows</td></tr>
-      <tr><td class="k">Verification</td><td>License ✓ · Board cert ✓ · Active practice ✓ · Disciplinary history: none found</td></tr>
-      <tr><td class="k">Conflicts check</td><td>Cleared against the parties named in the request</td></tr>
-      <tr><td class="k">Testimony history</td><td>5 matters: 2 plaintiff / 3 defense. Deposed 3×, trial 1×. Never excluded. Prior 2-622 reports in IL hip/knee matters</td></tr>
-      <tr><td class="k">Rates</td><td>Review $600/hr · Deposition $900/hr · Trial $1,100/hr · Retainer $3,000</td></tr>
-      <tr><td class="k">Availability</td><td>Can begin review this week; ~5 hrs/week. Available for 2-622 review and testimony</td></tr>
-    </table>
-    <p class="note"><strong>Screener note:</strong> Revision-arthroplasty focus is directly on-point where the allegation includes failure to revise; the academic post adds report-writing polish.</p>
-  </section>
-
-  <h3 class="sec">How every ConveneMD dossier is built</h3>
-  <ol class="how">
-    <li><strong>Verified before you see it</strong> — license, board certification, active-practice status, and disciplinary history checked against primary sources.</li>
-    <li><strong>Conflicts-cleared</strong> — candidates are checked against your named parties and receive no case details until the check clears.</li>
-    <li><strong>Testimony on the table</strong> — full history with plaintiff/defense split and any exclusions, so nothing surprises you on cross.</li>
-    <li><strong>True rates</strong> — the expert sets their rate and keeps 100% of it. ConveneMD's flat, itemized 20% service fee is added on top, only if you retain, as its own line on every invoice.</li>
-    <li><strong>Free screening calls</strong> — speak with finalists before you decide. If we ever miss the 24-hour window on a common specialty, our fee on that case is $0.</li>
-  </ol>
-
-  <div class="cta-band">
-    <p>Send a specialty and a state. Judge the dossiers yourself.</p>
-    <a class="btn" href="request-expert.html">Request an Expert</a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img class="mark" src="mark.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
+    <nav class="navlinks">
+      <a href="index.html#offer">The Offer</a>
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#specialties">Specialties</a>
+      <a href="index.html#physicians">For Physicians</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn" href="request-expert.html">Request an Expert</a>
+    </nav>
   </div>
+</header>
 
-  <footer>ConveneMD · Physician-led expert matching · convenemd.com · Cases: cases@convenemd.com<br>Clear medical opinions, matched in 24 hours.</footer>
+<div class="docpage">
+  <div class="wrap narrow">
+    <span class="samplebadge">Sample — all candidates fictional</span>
+    <h1>What a ConveneMD dossier looks like.</h1>
+    <p class="lede">This is the document a firm receives within 24 hours of a case request: verified credentials, a completed conflicts check, full testimony history, and the expert's true rates. The physicians below are invented — the format, checks, and transparency are exactly real.</p>
+    <div class="reqbox"><strong>Sample request:</strong> Plaintiff firm, Illinois. Reviewing physician for a 735 ILCS 5/2-622 report — total hip arthroplasty matter (alleged component malpositioning / failure to revise). Reviewer may continue as testifying expert.</div>
+
+    <div class="cand rv">
+      <h2>Candidate A — Daniel R. Kessler, MD<span class="fic">(fictional)</span></h2>
+      <table class="spec"><tr><td class="k">Specialty</td><td>Orthopedic Surgery — adult reconstruction (hip &amp; knee arthroplasty)</td></tr><tr><td class="k">Board certification</td><td>ABOS, Orthopaedic Surgery; fellowship-trained, adult reconstruction</td></tr><tr><td class="k">Licensure</td><td>Illinois (active, no restrictions) — verified</td></tr><tr><td class="k">Active practice</td><td>Yes — ~450 primary hip/knee replacements per year, community hospital + ASC</td></tr><tr><td class="k">Experience</td><td>16 years post-fellowship</td></tr><tr><td class="k">Verification</td><td>License ✓ · Board cert ✓ · Active practice ✓ · Disciplinary history: none found</td></tr><tr><td class="k">Conflicts check</td><td>Cleared against the parties named in the request; no prior involvement with the treating facility</td></tr><tr><td class="k">Testimony history</td><td>9 matters: 5 plaintiff / 4 defense. Deposed 6×, trial 2×. Never excluded</td></tr><tr><td class="k">Rates</td><td>Review $650/hr · Deposition $950/hr · Trial $1,200/hr · Retainer $3,500</td></tr><tr><td class="k">Availability</td><td>Can begin review within 48 hours of engagement; ~6 hrs/week. Available for 2-622 review and testimony</td></tr></table>
+      <p class="screener"><b>Screener note:</b> High-volume arthroplasty surgeon whose practice mirrors the treating physician's setting — the profile Illinois courts expect for a 2-622 reviewer in a hip case.</p>
+    </div>
+
+    <div class="cand rv">
+      <h2>Candidate B — Priya S. Raman, MD<span class="fic">(fictional)</span></h2>
+      <table class="spec"><tr><td class="k">Specialty</td><td>Orthopedic Surgery — adult reconstruction; revision arthroplasty focus</td></tr><tr><td class="k">Board certification</td><td>ABOS, Orthopaedic Surgery; fellowship-trained, adult reconstruction</td></tr><tr><td class="k">Licensure</td><td>Illinois + Indiana (active, no restrictions) — verified</td></tr><tr><td class="k">Active practice</td><td>Yes — academic medical center; revision hip cases a substantial share of practice</td></tr><tr><td class="k">Experience</td><td>12 years post-fellowship; teaches arthroplasty fellows</td></tr><tr><td class="k">Verification</td><td>License ✓ · Board cert ✓ · Active practice ✓ · Disciplinary history: none found</td></tr><tr><td class="k">Conflicts check</td><td>Cleared against the parties named in the request</td></tr><tr><td class="k">Testimony history</td><td>5 matters: 2 plaintiff / 3 defense. Deposed 3×, trial 1×. Never excluded. Prior 2-622 reports in IL hip/knee matters</td></tr><tr><td class="k">Rates</td><td>Review $600/hr · Deposition $900/hr · Trial $1,100/hr · Retainer $3,000</td></tr><tr><td class="k">Availability</td><td>Can begin review this week; ~5 hrs/week. Available for 2-622 review and testimony</td></tr></table>
+      <p class="screener"><b>Screener note:</b> Revision-arthroplasty focus is directly on-point where the allegation includes failure to revise; the academic post adds report-writing polish.</p>
+    </div>
+
+    <h2 style="margin-top:4.5rem">How every ConveneMD dossier is built</h2>
+    <ol class="howlist">
+      <li><span class="n">01</span><div><h3>Verified before you see it</h3><p>License, board certification, active-practice status, and disciplinary history checked against primary sources.</p></div></li>
+      <li><span class="n">02</span><div><h3>Conflicts-cleared</h3><p>Candidates are checked against your named parties and receive no case details until the check clears.</p></div></li>
+      <li><span class="n">03</span><div><h3>Testimony on the table</h3><p>Full history with plaintiff/defense split and any exclusions, so nothing surprises you on cross.</p></div></li>
+      <li><span class="n">04</span><div><h3>True rates</h3><p>The expert sets their rate and keeps 100% of it. ConveneMD's flat, itemized 20% service fee is added on top, only if you retain, as its own line on every invoice.</p></div></li>
+      <li><span class="n">05</span><div><h3>Free screening calls</h3><p>Speak with finalists before you decide. If we ever miss the 24-hour window on a common specialty, our fee on that case is $0.</p></div></li>
+    </ol>
+  </div>
 </div>
+
+<div class="final">
+  <div class="wrap narrow">
+    <h2>Send a specialty and a state. Judge the dossiers yourself.</h2>
+    <p>The first look is free — and if we're late, our fee is waived.</p>
+    <a class="btn light" href="request-expert.html">Request an Expert</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="mark" src="mark.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
+    <p>Clear medical opinions, matched in 24 hours.<br>
+    Cases: <a href="mailto:cases@convenemd.com">cases@convenemd.com</a> · <a href="request-expert.html">Request an expert</a> · <a href="join-as-expert.html">Join as an expert</a> · <a href="illinois-affidavit-of-merit.html">Illinois 2-622 guide</a></p>
+    <p class="fineprint">ConveneMD is a physician expert matching and administrative services company. It is not a law firm and does not provide legal or medical advice. Physician experts are independent professionals; their opinions are their own. ConveneMD's service fee is a markup on expert time and is never contingent on the outcome of any case or the content of any testimony. © 2026 ConveneMD. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+  var c=document.querySelector('.count');
+  if(c){
+    var to=parseInt(c.getAttribute('data-to'),10)||0,t0=null;
+    function tick(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);c.textContent=Math.round(to*(0.2+0.8*p*p));if(p<1)requestAnimationFrame(tick);else c.textContent=to;}
+    setTimeout(function(){requestAnimationFrame(tick)},350);
+  }
+  var hd=document.querySelector('header');
+  addEventListener('scroll',function(){hd.classList.toggle('scrolled',scrollY>8)},{passive:true});
+})();
+</script>
 </body>
 </html>
