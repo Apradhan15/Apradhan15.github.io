@@ -6,49 +6,49 @@
 <title>ConveneMD — Request an Expert (Attorney Case Intake)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#0c2233;--ink2:#11334d;--paper:#f7f5f0;--gold:#c2a059;--gold-d:#a8863c;--mut:#5a6b78;--line:#e3ded2}
+  :root{--ink:#17222b;--mut:#5c6871;--acc:#1d4e68;--acc-d:#163c51;--line:#dde3e7;--line2:#c9d2d9;--wash:#f4f6f7}
   *{box-sizing:border-box}
-  body{margin:0;font-family:'Inter',-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
-  .topbar{max-width:680px;margin:0 auto;padding:1.1rem 1.25rem .4rem;display:flex;justify-content:space-between;align-items:center}
-  .brand{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:700;text-decoration:none;color:var(--ink)}
-  .brand b{color:var(--gold-d)}
-  .who{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
-  .card{max-width:680px;margin:.6rem auto 3rem;background:#fff;border:1px solid var(--line);border-radius:18px;padding:2.2rem 2.2rem 1.8rem;box-shadow:0 8px 30px rgba(12,34,51,.06)}
-  @media(max-width:560px){.card{padding:1.5rem 1.2rem 1.3rem;border-radius:0;border-left:0;border-right:0}}
-  .pwrap{margin-bottom:1.6rem}
-  .plabel{display:flex;justify-content:space-between;font-size:.8rem;color:var(--mut);font-weight:600;margin-bottom:.45rem}
-  .pbar{height:6px;background:#eee8da;border-radius:99px;overflow:hidden}
-  .pfill{height:100%;background:var(--gold);border-radius:99px;transition:width .35s ease}
+  body{margin:0;font-family:'Libre Franklin',-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .topbar{max-width:720px;margin:0 auto;padding:1.6rem 1.5rem .2rem;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-weight:800;font-size:1.25rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .brand span{color:var(--acc)}
+  .who{font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .card{max-width:720px;margin:1.2rem auto 4rem;padding:0 1.5rem}
+  .pwrap{margin-bottom:2.2rem}
+  .plabel{display:flex;justify-content:space-between;font-size:.8rem;color:var(--mut);font-weight:600;margin-bottom:.5rem}
+  .pbar{height:3px;background:var(--line);overflow:hidden}
+  .pfill{height:100%;background:var(--acc);transition:width .35s ease}
   fieldset{border:0;padding:0;margin:0;display:none}
   fieldset.active{display:block;animation:fade .25s ease}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  h1{font-family:'Fraunces',Georgia,serif;font-size:1.55rem;line-height:1.2;margin:.1rem 0 .4rem}
-  .hint{color:var(--mut);font-size:.95rem;margin:0 0 1.2rem}
-  label{display:block;margin:1rem 0 .3rem;font-weight:600;font-size:.93rem}
+  h1{font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:1.8rem;line-height:1.2;margin:.1rem 0 .5rem}
+  .hint{color:var(--mut);font-size:1rem;margin:0 0 1.4rem}
+  label{display:block;margin:1.15rem 0 .35rem;font-weight:600;font-size:.93rem}
   label small{color:var(--mut);font-weight:400}
   input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],select,textarea{
-    width:100%;padding:.75rem .8rem;border:1.5px solid #cfd8de;border-radius:10px;font-size:1rem;font-family:inherit;background:#fff}
-  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+    width:100%;padding:.8rem .85rem;border:1px solid var(--line2);border-radius:4px;font-size:1rem;font-family:inherit;background:#fff}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);border-color:var(--acc)}
   textarea{min-height:5.2rem}
-  .check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;margin:.55rem 0}
-  .check input{margin-top:.25rem;width:1.05rem;height:1.05rem;accent-color:var(--ink)}
-  .navrow{display:flex;justify-content:space-between;gap:.8rem;margin-top:1.9rem}
-  button{font-family:inherit;font-weight:600;font-size:.98rem;border-radius:999px;padding:.75rem 1.6rem;cursor:pointer;border:1px solid var(--ink)}
-  .next{background:var(--ink);color:#fff}
-  .next:hover{background:var(--ink2)}
-  .back{background:transparent;color:var(--ink)}
-  .submit{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-  .submit:hover{background:var(--gold-d);color:#fff}
-  .err{color:#b3261e;font-size:.88rem;font-weight:600;min-height:1.2em;margin-top:.7rem}
-  .note{background:#fbf7ec;border:1px solid #eadfbe;border-radius:10px;padding:.8rem 1rem;font-size:.9rem;margin-top:1.1rem}
-  .assure{text-align:center;color:var(--mut);font-size:.85rem;margin-top:1.1rem}
+  .check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;margin:.6rem 0}
+  .check input{margin-top:.25rem;width:1.05rem;height:1.05rem;accent-color:var(--acc)}
+  .navrow{display:flex;justify-content:space-between;gap:.8rem;margin-top:2.4rem}
+  button{font-family:inherit;font-weight:600;font-size:.98rem;border-radius:4px;padding:.8rem 1.7rem;cursor:pointer;border:1px solid var(--acc)}
+  .next{background:var(--acc);color:#fff}
+  .next:hover{background:var(--acc-d)}
+  .back{background:transparent;color:var(--ink);border-color:var(--line2)}
+  .back:hover{border-color:var(--ink)}
+  .submit{background:var(--acc);border-color:var(--acc);color:#fff}
+  .submit:hover{background:var(--acc-d)}
+  .err{color:#b3261e;font-size:.88rem;font-weight:600;min-height:1.2em;margin-top:.8rem}
+  .note{background:var(--wash);border-left:3px solid var(--acc);padding:1rem 1.15rem;font-size:.92rem;margin-top:1.3rem}
+  .assure{text-align:center;color:var(--mut);font-size:.86rem;margin-top:1.4rem}
 </style>
 </head>
 <body>
 <div class="topbar">
-  <a class="brand" href="index.html">Convene<b>MD</b></a>
+  <a class="brand" href="index.html">Convene<span>MD</span></a>
   <span class="who">Attorney Case Intake</span>
 </div>
 
