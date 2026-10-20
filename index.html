@@ -28,7 +28,7 @@
   header.scrolled{box-shadow:0 8px 28px rgba(23,34,43,.09)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
   .brand{font-weight:800;font-size:1.32rem;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
-  .brand span{color:var(--acc)}
+  .brand span{color:inherit}
   .navlinks{display:flex;gap:2.1rem;align-items:center}
   .navlinks a{text-decoration:none;font-size:.93rem;font-weight:500;color:var(--ink)}
   .navlinks a:hover{color:var(--acc)}
@@ -123,7 +123,7 @@
 .brand .mark{vertical-align:-7px;margin-right:.5rem;border-radius:6px}
 </style>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABcUlEQVR4nO2b0RHCIBBEL4xtaEnahlakbWhJWoh+OHEYgsAlzq3h9v2ZkGF3AwxnkkEUbPfHp6Y9isftMrS2rTZci+lv1MIIpZNrNy9S95BNpwfjOXKjYTICejUvkvcWag16I/VYXAM88AnAw90fib2G9IAXRs+cAmgBaAaPwz9mg+j0fj1/Pbc7nAyVAKZAyXzL+V9jGkCrOcsQ3C+CDAAtAA0DQAtAwwDQAtAwALQANAwALQCNaQCtlZ5lRTj7/wBtwRKbai2Hl/TRyqwA5lZrGoEWfYjMmAJLSlWLclh7LRdBtAA0DAAtAA0DQAtAow5gyS7NYieovZY7QetHYy2mLGsBPhgx6+lPYQBoAWgYAFoAGgaAFoCGAaAFoGEAaAFo3D8YMR8BNXPW7wkOIj5flhZ5f0HCNQAtAE0Q0X1n1wuj55Ae8EDslVMg/uFhFKQeJyOg5xBy3opme9kflG5qcQ3oYTTUPKgMrmVEaG7cC4+2hZLgqFaeAAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAw0lEQVR4nO3aPRJAMBRFYbEJvdb+l6LVZxX0CpLgHTM5X+snN3fGjDcMgyRJkqQepegFp3nZr47nbQ3NNEYudrf50nPeFFrAH1kAHYBmAXQAmgXQAWgWQAegWQAdgGYBdABa0+jZOrHlbU0l4/CT+9deU33B03H1LuTX9z/r/hGwADoAzQLoADQLoAPQfBFqWahV6cYiP450/whYAB2AZgF0AJoF0AFoFkAHoFkAHYBmAXQAWmgBJVNe9G9ykiRJkvp0ACSgMEzzlz7nAAAAAElFTkSuQmCC">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ConveneMD">
 <meta property="og:title" content="ConveneMD — Physician Expert Witness Matching">
@@ -136,12 +136,15 @@
 <meta name="twitter:title" content="ConveneMD — Physician Expert Witness Matching">
 <meta name="twitter:description" content="Vetted physician experts, matched in 24 hours — guaranteed. Nothing to look.">
 <meta name="twitter:image" content="https://convenemd.com/og-image.png">
+
+<link rel="canonical" href="https://convenemd.com/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "ConveneMD", "url": "https://convenemd.com/", "logo": "https://convenemd.com/logo.svg", "email": "cases@convenemd.com", "slogan": "Clear medical opinions, matched in 24\u201348 hours.", "description": "Physician-led expert witness matching for medical malpractice and personal injury law firms."}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does ConveneMD charge?", "acceptedAnswer": {"@type": "Answer", "text": "A flat 20% service fee on the expert's billed fees, itemized on every invoice \u2014 charged only when you retain an expert. Searching, dossiers, and screening calls are free. Founding Firms (our first 10) lock the 20% rate permanently; the standard rate will be 30%."}}, {"@type": "Question", "name": "How does payment work?", "acceptedAnswer": {"@type": "Answer", "text": "One vendor, one bill. Your firm funds a retainer with ConveneMD against a written estimate; the expert invoices us, we audit the time against the estimate, and we pay the expert 100% of their rate. Unused retainer is refunded at case close."}}, {"@type": "Question", "name": "Can you guarantee the expert supports our case?", "acceptedAnswer": {"@type": "Answer", "text": "No \u2014 and any service that does should worry you. Our experts are independent physicians who give their honest opinion; that independence is what makes their testimony credible. What we guarantee is speed, vetting, transparency, and process."}}, {"@type": "Question", "name": "How are experts vetted?", "acceptedAnswer": {"@type": "Answer", "text": "Board certification, active licensure in your case state, active clinical practice, disciplinary history, prior testimony record, and a conflicts check against the named parties \u2014 verified before a dossier ever reaches you."}}, {"@type": "Question", "name": "What if you can't fill my case?", "acceptedAnswer": {"@type": "Answer", "text": "You will know within 4 business hours, with a straight explanation. No stringing along, and of course no charge."}}, {"@type": "Question", "name": "What happens if my expert has to withdraw mid-case?", "acceptedAnswer": {"@type": "Answer", "text": "We source and onboard a replacement at no charge, and our service fee is waived until the replacement is current on the record."}}]}]}</script>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="index.html"><img class="mark" src="favicon.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
+    <a class="brand" href="index.html"><img class="mark" src="mark.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
     <nav class="navlinks">
       <a href="#offer">The Offer</a>
       <a href="#how">How It Works</a>
@@ -281,9 +284,9 @@
 
 <footer>
   <div class="wrap">
-    <a class="brand" href="index.html"><img class="mark" src="favicon.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
+    <a class="brand" href="index.html"><img class="mark" src="mark.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
     <p>Clear medical opinions, matched in 24–48 hours.<br>
-    Cases: <a href="mailto:cases@convenemd.com">cases@convenemd.com</a> · <a href="request-expert.html">Request an expert</a> · <a href="join-as-expert.html">Join as an expert</a></p>
+    Cases: <a href="mailto:cases@convenemd.com">cases@convenemd.com</a> · <a href="request-expert.html">Request an expert</a> · <a href="join-as-expert.html">Join as an expert</a> · <a href="illinois-affidavit-of-merit.html">Illinois 2-622 guide</a></p>
     <p class="fineprint">ConveneMD is a physician expert matching and administrative services company. It is not a law firm and does not provide legal or medical advice. Physician experts are independent professionals; their opinions are their own. ConveneMD's service fee is a markup on expert time and is never contingent on the outcome of any case or the content of any testimony. © 2026 ConveneMD. All rights reserved.</p>
   </div>
 </footer>
