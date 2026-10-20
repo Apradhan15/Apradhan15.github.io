@@ -43,10 +43,10 @@
   .btn.ghostl{background:transparent;border-color:#46545f;color:#fff !important}
   .btn.ghostl:hover{border-color:#fff}
 
-  .hero{padding:6.5rem 0 6rem;background:linear-gradient(180deg,#ffffff 55%,#f7f9fa 100%)}
+  .hero{padding:8.5rem 0 7.5rem;background:radial-gradient(62rem 30rem at 88% -12%,rgba(29,78,104,.08),rgba(29,78,104,0) 60%),linear-gradient(180deg,#ffffff 55%,#f7f9fa 100%)}
   .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:700;color:var(--acc);margin-bottom:1.6rem}
-  .hero h1{font-size:clamp(2.5rem,5.4vw,4rem);max-width:13.5em}
-  .hero p.sub{font-size:1.22rem;color:var(--mut);max-width:37em;margin:1.8rem 0 2.6rem;line-height:1.6}
+  .hero h1{font-size:clamp(3rem,6.4vw,4.9rem);max-width:15em;letter-spacing:-.03em}
+  .hero p.sub{font-size:1.25rem;color:var(--mut);max-width:38em;margin:2rem 0 2.8rem;line-height:1.6}
   .cta-row{display:flex;gap:1rem;flex-wrap:wrap}
   .facts{display:flex;gap:3rem;flex-wrap:wrap;margin-top:4.5rem;padding-top:2.2rem;border-top:1px solid var(--line)}
   .fact b{display:block;font-family:'Source Serif 4',serif;font-size:1.65rem;font-weight:600;line-height:1.1}
@@ -116,22 +116,33 @@
   footer a{color:var(--acc)}
   .fineprint{color:var(--faint);font-size:.8rem;margin-top:1.6rem;max-width:62em;line-height:1.6}
 
-  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:4rem;align-items:center}
-  @media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
-  .hero-media{margin:0}
-  .hero-media img{width:100%;height:580px;object-fit:cover;display:block;border-radius:6px}
-  @media(max-width:960px){.hero-media img{height:340px}}
   .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.61,.36,1)}
   .rv.in{opacity:1;transform:none}
   .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
   @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
+.brand .mark{vertical-align:-7px;margin-right:.5rem;border-radius:6px}
 </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ConveneMD">
+<meta property="og:title" content="ConveneMD — Physician Expert Witness Matching">
+<meta property="og:description" content="Vetted, actively practicing physician experts for med-mal and personal injury firms. Dossiers in 24 hours — guaranteed. Nothing to look; flat itemized 20% only if you retain.">
+<meta property="og:url" content="https://convenemd.com/">
+<meta property="og:image" content="https://convenemd.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ConveneMD — Physician Expert Witness Matching">
+<meta name="twitter:description" content="Vetted physician experts, matched in 24 hours — guaranteed. Nothing to look.">
+<meta name="twitter:image" content="https://convenemd.com/og-image.png">
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="index.html">Convene<span>MD</span></a>
+    <a class="brand" href="index.html"><img class="mark" src="favicon.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
     <nav class="navlinks">
       <a href="#offer">The Offer</a>
       <a href="#how">How It Works</a>
@@ -144,8 +155,7 @@
 </header>
 
 <div class="hero">
-  <div class="wrap hero-grid">
-    <div>
+  <div class="wrap">
     <div class="eyebrow rv">Physician-run expert witness matching</div>
     <h1 class="rv d1">The right physician expert for your case. In 24 hours — guaranteed.</h1>
     <p class="sub rv d2">ConveneMD matches medical malpractice and personal injury firms with vetted, actively practicing, board-certified physician experts — with full dossiers, transparent pricing, and a written guarantee behind the match.</p>
@@ -158,10 +168,6 @@
       <div class="fact"><b>$0 to look</b><span>no search fees, no subscription</span></div>
       <div class="fact"><b>Free replacement</b><span>if your expert ever exits the case</span></div>
     </div>
-    </div>
-    <figure class="hero-media rv d2">
-      <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=1400&q=70" alt="A physician reviewing case records">
-    </figure>
   </div>
 </div>
 
@@ -276,7 +282,7 @@
 
 <footer>
   <div class="wrap">
-    <a class="brand" href="index.html">Convene<span>MD</span></a>
+    <a class="brand" href="index.html"><img class="mark" src="favicon.svg" alt="" width="27" height="27">Convene<span>MD</span></a>
     <p>Clear medical opinions, matched in 24–48 hours.<br>
     Cases: <a href="mailto:cases@convenemd.com">cases@convenemd.com</a> · <a href="request-expert.html">Request an expert</a> · <a href="join-as-expert.html">Join as an expert</a></p>
     <p class="fineprint">ConveneMD is a physician expert matching and administrative services company. It is not a law firm and does not provide legal or medical advice. Physician experts are independent professionals; their opinions are their own. ConveneMD's service fee is a markup on expert time and is never contingent on the outcome of any case or the content of any testimony. © 2026 ConveneMD. All rights reserved.</p>
